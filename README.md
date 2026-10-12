@@ -1,36 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Campus Allocate
 
-## Getting Started
+A Next.js campus room booking and allocation application for managing room availability, filters, and booking workflows.
 
-First, run the development server:
+## Prerequisites
+
+Before running the app, make sure you have:
+
+- Node.js 18 or later
+- npm 9 or later
+- A modern browser
+
+## Install dependencies
+
+From the project root:
+
+```bash
+cd "D:\CodeHub\HelloWord\campus-allocate"
+npm install
+```
+
+## Run the app in development mode
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Production build
 
-## Learn More
+To build the app for production:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To start the production build locally:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm start
+```
 
-## Deploy on Vercel
+## Available scripts
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run dev    # start local development server
+npm run build  # create an optimized production build
+npm run start  # run the built app
+npm run lint   # check for lint issues
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Project structure
+
+```text
+campus-allocate/
+├── src/
+│   ├── app/
+│   ├── components/
+│   ├── context/
+│   ├── lib/
+│   └── ...
+├── public/
+├── package.json
+├── next.config.ts
+├── tsconfig.json
+├── README.md
+└── eslint.config.mjs
+```
+
+## Notes
+
+- The app uses Next.js and React.
+- Changes in the source files are reflected automatically during development.
+- If you face a dependency or runtime issue, delete the node_modules folder and reinstall dependencies:
+
+```bash
+rm -rf node_modules
+npm install
+```
+
+If you are using PowerShell on Windows, use:
+
+```powershell
+Remove-Item -Recurse -Force node_modules
+npm install
+```
+
+## Troubleshooting
+
+If the app does not start:
+
+1. Confirm Node.js is installed:
+   ```bash
+   node -v
+   npm -v
+   ```
+2. Install dependencies again:
+   ```bash
+   npm install
+   ```
+3. Run the dev server again:
+   ```bash
+   npm run dev
+   ```
+
